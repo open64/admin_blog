@@ -1,4 +1,6 @@
 AdminBlog::Application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   get "posts/new"
   get "posts/index"
   get "posts/show"
