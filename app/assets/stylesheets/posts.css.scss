@@ -1,3 +1,48 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+a {
+  text-decoration: none;
+}
+.navigation {;
+  padding: 1% 50%;
+  background-image: url(image_path('rock.png'));
+  a {
+    font-size: 28px;
+    color: #18C0DF;
+//    text-decoration: none;
+    display: inline;
+  }
+}
+
+.content {
+  margin: 20px;
+  .title {
+    font-size: 28px;
+    color: #cb9810;
+  }
+  .created_at {
+    font-size: 14px;
+    color: #cdcdcd;
+  }
+  .description {
+    font-size: 16px;
+    color: #8daa92;
+  }
+  .action {
+    a {
+      color: #cc0000;
+    }
+  }
+  .new_post {
+    a {
+      color: #478500;
+    }
+  }
+}
+
+body {
+  margin: 0;
+  background-image: url(image_path("dragon.png"));
+}

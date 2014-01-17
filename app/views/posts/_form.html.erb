@@ -1,0 +1,12 @@
+<%= form_for(@post) do |form| %>
+  <div class="title">
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </div>
+  <div class="description">
+    <%= form.label :description %><br>
+
+    <%= form.cktext_area :description, class: "someclass", ckeditor: { language: "en" } %>
+  </div>
+  <%= form.submit 'Create post' , class: 'btn btn-large btn-primary' %>
+<% end %>

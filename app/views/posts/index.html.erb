@@ -1,2 +1,21 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<% @posts.each do |post| %>
+  <div>
+    <div class="created_at">
+      <%= post[:created_at] %>
+    </div>
+    <div class="title">
+      <%= post[:title] %>
+    </div>
+    <div class="description">
+      <%= raw post[:description] %>
+    </div>
+    <div class="action">
+      <span><%= link_to 'Read all', post %></span>
+      <span><%= link_to 'Edit post', edit_post_path(post) %></span>
+      <span><%= link_to 'Delete post', post, method: 'delete' %></span>
+    </div>
+  </div>
+<% end %>
+<div class="new_post">
+  <%= link_to 'Create new post', new_post_path %>
+</div>

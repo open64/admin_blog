@@ -8,7 +8,12 @@
 </head>
 <body>
 
-<%= yield %>
+<nav class="navigation">
+  <%= link_to 'Home', root_path %>
+</nav>
+<div class="content">
+  <%= yield %>
+</div>
 
 </body>
 </html>
